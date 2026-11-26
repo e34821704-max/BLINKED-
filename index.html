@@ -20,7 +20,7 @@
 
         body {
             /* Luxurious Deep Plum & Rose Gold Gradient */
-            background: linear-gradient(135deg, #1a1114 0%, #2d1b22 50%, #1a1114 100%);
+            background: linear-gradient(135deg, #140d10 0%, #29181f 50%, #140d10 100%);
             font-family: 'Montserrat', sans-serif;
             color: #fdf5f5;
             line-height: 1.6;
@@ -36,94 +36,107 @@
         .orb {
             position: absolute;
             border-radius: 50%;
-            filter: blur(80px);
+            filter: blur(90px);
             z-index: 0;
-            opacity: 0.6;
-            animation: float 10s infinite ease-in-out alternate;
+            opacity: 0.5;
+            animation: float 12s infinite ease-in-out alternate;
         }
         .orb-1 {
-            width: 400px; height: 400px;
-            background: rgba(212, 165, 165, 0.4); /* Rose Gold */
-            top: -100px; left: -100px;
-            animation-delay: 0s;
+            width: 450px; height: 450px;
+            background: rgba(212, 165, 165, 0.3);
+            top: -150px; left: -150px;
         }
         .orb-2 {
-            width: 300px; height: 300px;
-            background: rgba(163, 107, 107, 0.5); /* Deep Rose */
-            bottom: 20%; right: -50px;
-            animation-delay: -3s;
+            width: 350px; height: 350px;
+            background: rgba(163, 107, 107, 0.4);
+            bottom: 10%; right: -100px;
+            animation-delay: -4s;
         }
         .orb-3 {
-            width: 250px; height: 250px;
-            background: rgba(230, 194, 194, 0.3); /* Light Rose */
-            top: 40%; left: 20%;
-            animation-delay: -6s;
+            width: 300px; height: 300px;
+            background: rgba(230, 194, 194, 0.2);
+            top: 40%; left: 15%;
+            animation-delay: -8s;
         }
 
         @keyframes float {
             0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(40px, 60px) scale(1.1); }
+            100% { transform: translate(50px, 70px) scale(1.15); }
         }
 
         /* Main Container */
         .catalogue-wrapper {
             max-width: 1300px;
             width: 95%;
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
             border-radius: 3rem;
             box-shadow: 
                 0 30px 60px -15px rgba(0,0,0,0.9),
-                0 0 0 1px rgba(255, 215, 215, 0.1) inset,
-                0 0 50px rgba(200, 150, 150, 0.1) inset;
-            border: 1px solid rgba(255, 230, 230, 0.1);
+                0 0 0 1px rgba(255, 215, 215, 0.08) inset,
+                0 0 60px rgba(200, 150, 150, 0.05) inset;
+            border: 1px solid rgba(255, 230, 230, 0.08);
             padding: 2.5rem;
             margin: 2rem 0;
             position: relative;
             z-index: 1;
         }
 
-        /* Header */
+        /* --- CUSTOM SVG LOGO --- */
         .logo-area {
-            text-align: center;
-            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2.5rem;
             position: relative;
         }
 
-        .logo {
+        .brand-logo-svg {
+            width: 120px;
+            height: auto;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.6)) drop-shadow(0 0 20px rgba(212, 165, 165, 0.4));
+            transition: transform 0.4s ease;
+        }
+
+        .logo-area:hover .brand-logo-svg {
+            transform: scale(1.05) translateY(-5px);
+        }
+
+        .logo-text {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 6.5rem;
+            font-size: 5rem;
             font-weight: 700;
-            letter-spacing: 18px;
+            letter-spacing: 20px;
             text-transform: uppercase;
             background: linear-gradient(to bottom, #ffffff, #f0d3d3, #b88383);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 10px 20px rgba(0,0,0,0.5), 0 0 40px rgba(255, 200, 200, 0.3);
-            display: inline-block;
+            text-shadow: 0 8px 15px rgba(0,0,0,0.5), 0 0 30px rgba(255, 200, 200, 0.2);
             line-height: 1;
             margin-bottom: 0.5rem;
+            margin-left: 20px; /* offsets the letter-spacing to center it */
         }
 
         .tagline {
             font-weight: 300;
-            letter-spacing: 10px;
+            letter-spacing: 8px;
             font-size: 0.85rem;
             color: #d4baba;
             text-transform: uppercase;
             text-shadow: 0 2px 5px rgba(0,0,0,0.8);
         }
 
-        /* Hero Slider */
+        /* --- HERO SLIDER (10 Images) --- */
         .hero-slider {
             width: 100%;
-            height: 350px;
+            height: 400px;
             border-radius: 2rem;
             overflow: hidden;
             position: relative;
             margin-bottom: 3rem;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.1) inset;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.8), 0 0 0 1px rgba(255,255,255,0.08) inset;
         }
 
         .slide {
@@ -131,12 +144,12 @@
             top: 0; left: 0;
             width: 100%; height: 100%;
             opacity: 0;
-            transition: opacity 1s ease-in-out;
+            transition: opacity 1.2s ease-in-out;
             background-size: cover;
             background-position: center;
             display: flex;
             align-items: flex-end;
-            padding: 2rem;
+            padding: 2.5rem;
         }
 
         .slide.active {
@@ -147,8 +160,8 @@
             content: '';
             position: absolute;
             bottom: 0; left: 0; right: 0;
-            height: 60%;
-            background: linear-gradient(to top, rgba(20, 10, 15, 0.9), transparent);
+            height: 70%;
+            background: linear-gradient(to top, rgba(15, 8, 10, 0.95), transparent);
             z-index: 1;
         }
 
@@ -156,16 +169,24 @@
             position: relative;
             z-index: 2;
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2.5rem;
+            font-size: 3rem;
             color: #fff;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+            text-shadow: 0 4px 15px rgba(0,0,0,0.9);
             letter-spacing: 2px;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.8s ease 0.3s;
+        }
+
+        .slide.active .slide-text {
+            transform: translateY(0);
+            opacity: 1;
         }
 
         /* Service Grid */
         .service-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin: 3rem 0;
         }
@@ -177,14 +198,12 @@
         }
 
         .service-card {
-            background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
             border-radius: 2rem;
             padding: 2.5rem 1.5rem 2rem;
             text-align: center;
-            border: 1px solid rgba(255, 215, 215, 0.15);
-            box-shadow: 
-                8px 8px 16px rgba(0,0,0,0.4),
-                -4px -4px 12px rgba(255, 220, 220, 0.03) inset;
+            border: 1px solid rgba(255, 215, 215, 0.1);
+            box-shadow: 8px 8px 16px rgba(0,0,0,0.5), -4px -4px 12px rgba(255, 220, 220, 0.02) inset;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             transform-style: preserve-3d;
             height: 100%;
@@ -194,14 +213,10 @@
             overflow: hidden;
         }
 
-        /* Card Hover Effect */
         .service-card:hover {
             transform: translateY(-10px) rotateX(5deg) rotateY(-5deg);
-            border-color: rgba(255, 200, 200, 0.4);
-            box-shadow: 
-                20px 25px 35px rgba(0,0,0,0.6),
-                -8px -8px 20px rgba(255, 220, 220, 0.05) inset,
-                0 0 30px rgba(200, 140, 140, 0.2);
+            border-color: rgba(255, 200, 200, 0.3);
+            box-shadow: 20px 25px 35px rgba(0,0,0,0.7), -8px -8px 20px rgba(255, 220, 220, 0.05) inset, 0 0 30px rgba(200, 140, 140, 0.15);
         }
 
         .service-card::before {
@@ -209,7 +224,7 @@
             position: absolute;
             top: -50%; left: -50%;
             width: 200%; height: 200%;
-            background: radial-gradient(circle at center, rgba(255, 230, 230, 0.1), transparent 60%);
+            background: radial-gradient(circle at center, rgba(255, 230, 230, 0.08), transparent 60%);
             opacity: 0;
             transition: opacity 0.4s;
             pointer-events: none;
@@ -220,31 +235,29 @@
         }
 
         .service-icon {
-            font-size: 3rem;
+            font-size: 2.8rem;
             color: #f0d3d3;
             margin-bottom: 1.5rem;
-            background: rgba(30, 15, 20, 0.8);
-            width: 90px; height: 90px;
-            line-height: 90px;
+            background: rgba(30, 15, 20, 0.6);
+            width: 85px; height: 85px;
+            line-height: 85px;
             border-radius: 50%;
             margin-left: auto; margin-right: auto;
-            box-shadow: 
-                5px 5px 15px rgba(0,0,0,0.6),
-                -2px -2px 10px rgba(255, 220, 220, 0.1) inset;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.7), -2px -2px 10px rgba(255, 220, 220, 0.08) inset;
             transition: all 0.3s;
-            transform: translateZ(30px); /* 3D pop effect */
+            transform: translateZ(30px);
         }
 
         .service-card:hover .service-icon {
             color: #fff;
             text-shadow: 0 0 20px #f0d3d3;
-            box-shadow: 0 0 25px rgba(220, 160, 160, 0.4);
+            box-shadow: 0 0 25px rgba(220, 160, 160, 0.3);
         }
 
         .service-card h3 {
             font-family: 'Cormorant Garamond', serif;
             font-weight: 600;
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             color: #fff;
             margin-bottom: 1rem;
             text-shadow: 0 2px 5px rgba(0,0,0,0.5);
@@ -252,11 +265,11 @@
         }
 
         .sample-note {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #d4baba;
             letter-spacing: 2px;
             margin-top: auto;
-            border-top: 1px solid rgba(255, 200, 200, 0.15);
+            border-top: 1px solid rgba(255, 200, 200, 0.1);
             padding-top: 1.2rem;
             text-transform: uppercase;
             font-weight: 400;
@@ -265,6 +278,73 @@
             justify-content: center;
             gap: 8px;
             transform: translateZ(10px);
+        }
+
+        /* --- TESTIMONIAL / BOOKING SLIDER --- */
+        .booking-section {
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .booking-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: #f0d3d3;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-slider {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 2rem;
+            border: 1px solid rgba(255, 215, 215, 0.1);
+            padding: 2rem;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05) inset;
+            overflow: hidden;
+        }
+
+        .testimonial {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+        }
+
+        .testimonial.active {
+            opacity: 1;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            color: #e6d5d5;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .testimonial h4 {
+            color: #f0d3d3;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .stars {
+            color: #d4a5a5;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            letter-spacing: 3px;
         }
 
         /* CTA Buttons */
@@ -291,13 +371,13 @@
             color: #fff;
             background: linear-gradient(135deg, #a36b6b, #6b3535);
             border: 1px solid rgba(255, 200, 200, 0.3);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.5), 0 0 20px rgba(200, 100, 100, 0.2) inset;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.6), 0 0 20px rgba(200, 100, 100, 0.15) inset;
             transition: all 0.3s ease;
         }
 
         .whatsapp-btn:hover {
             transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.7), 0 0 30px rgba(220, 150, 150, 0.4);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.8), 0 0 30px rgba(220, 150, 150, 0.3);
             background: linear-gradient(135deg, #b88383, #854b4b);
         }
 
@@ -327,7 +407,7 @@
             gap: 10px;
             color: #d4baba;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             letter-spacing: 2px;
             padding: 0.8rem 2rem;
             border-radius: 50px;
@@ -343,7 +423,7 @@
             text-align: center;
             font-size: 0.8rem;
             color: #9e8080;
-            border-top: 1px solid rgba(180, 140, 140, 0.2);
+            border-top: 1px solid rgba(180, 140, 140, 0.15);
             padding-top: 2rem;
             margin-top: 1rem;
         }
@@ -351,12 +431,13 @@
         /* Mobile Adjustments */
         @media (max-width: 768px) {
             .catalogue-wrapper { padding: 1.5rem; border-radius: 2rem; }
-            .logo { font-size: 4rem; letter-spacing: 10px; }
-            .tagline { letter-spacing: 5px; font-size: 0.7rem; }
-            .hero-slider { height: 250px; }
-            .slide-text { font-size: 1.8rem; }
+            .logo-text { font-size: 3rem; letter-spacing: 10px; margin-left: 10px; }
+            .tagline { letter-spacing: 4px; font-size: 0.65rem; }
+            .hero-slider { height: 300px; }
+            .slide-text { font-size: 2rem; }
             .service-grid { grid-template-columns: 1fr; }
             .whatsapp-btn { padding: 1rem 1.5rem; font-size: 0.8rem; width: 100%; }
+            .testimonial-slider { height: 250px; }
         }
     </style>
 </head>
@@ -368,22 +449,68 @@
     <div class="orb orb-3"></div>
 
     <div class="catalogue-wrapper">
-        <!-- Header -->
+        
+        <!-- Custom SVG Logo & Header -->
         <div class="logo-area">
-            <h1 class="logo">BLINKED</h1>
+            <!-- SVG Logo representing an elegant eye & diamond tear (The Blink) -->
+            <svg class="brand-logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#ffffff" />
+                        <stop offset="50%" stop-color="#f0d3d3" />
+                        <stop offset="100%" stop-color="#b88383" />
+                    </linearGradient>
+                    <linearGradient id="darkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#2d1b22" />
+                        <stop offset="100%" stop-color="#140d10" />
+                    </linearGradient>
+                </defs>
+                <!-- Eye Outline -->
+                <path d="M 10 50 Q 50 10 90 50 Q 50 90 10 50 Z" fill="url(#darkGradient)" stroke="url(#goldGradient)" stroke-width="3"/>
+                <!-- Iris -->
+                <circle cx="50" cy="50" r="18" fill="url(#goldGradient)" />
+                <!-- Pupil -->
+                <circle cx="50" cy="50" r="8" fill="#140d10" />
+                <!-- Diamond Tear (The Blink) -->
+                <polygon points="50,68 45,80 50,90 55,80" fill="url(#goldGradient)" opacity="0.9"/>
+                <!-- Eyelashes -->
+                <path d="M 25 35 L 20 20 M 50 20 L 50 5 M 75 35 L 80 20" stroke="url(#goldGradient)" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            <h1 class="logo-text">BLINKED</h1>
             <div class="tagline">Where Beauty Meets Comfort At Its Peak</div>
         </div>
 
-        <!-- Auto-playing Hero Slider -->
+        <!-- 10-Image Hero Slider -->
         <div class="hero-slider">
             <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1583002083754-80e5622aae68?auto=format&fit=crop&w=1200&q=80');">
-                <div class="slide-text">Flawless Lashes</div>
+                <div class="slide-text">Lash Installation</div>
+            </div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1200&q=80');">
+                <div class="slide-text">Precision Lash Extensions</div>
             </div>
             <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=1200&q=80');">
-                <div class="slide-text">Elegant Nails</div>
+                <div class="slide-text">Flawless Manicures</div>
+            </div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=80');">
+                <div class="slide-text">Elegant Pedicures</div>
             </div>
             <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=80');">
-                <div class="slide-text">Radiant Skin</div>
+                <div class="slide-text">Rejuvenating Facials</div>
+            </div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1200&q=80');">
+                <div class="slide-text">Radiant Skin Glow</div>
+            </div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1620331311520-246422fd82f9?auto=format&fit=crop&w=1200&q=80');">
+                <div class="slide-text">Brow Lamination & Tint</div>
+            </div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&w=1200&q=80');">
+                <div class="slide-text">Structured & Defined Brows</div>
+            </div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=1200&q=80');">
+                <div class="slide-text">Fine Line Tattoos</div>
+            </div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1562962230-16e4623d36e6?auto=format&fit=crop&w=1200&q=80');">
+                <div class="slide-text">Custom Tattoo Art</div>
             </div>
         </div>
 
@@ -438,6 +565,33 @@
             </a>
         </div>
 
+        <!-- Customer Bookings & Inquiries Slider -->
+        <div class="booking-section">
+            <h2>Client Love & Inquiries</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"The lash extensions were so natural and light! I've received so many compliments. Booking through WhatsApp was so seamless."</p>
+                    <h4>— Amaka O., Lekki</h4>
+                </div>
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Best facial I've had in Lagos. My skin is still glowing days later. The attention to detail is unmatched."</p>
+                    <h4>— Tunde A., Ikoyi</h4>
+                </div>
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"I was nervous about getting a tattoo, but the artist was so professional. The lines are incredibly crisp. Highly recommend BLINKED!"</p>
+                    <h4>— Sarah M., Victoria Island</h4>
+                </div>
+                <div class="testimonial">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"My brows have never looked better! The lamination and tint completely transformed my face. Such a luxurious experience."</p>
+                    <h4>— Chioma E., Ikeja</h4>
+                </div>
+            </div>
+        </div>
+
         <!-- Location & CTAs -->
         <div class="cta-group">
             <a href="https://wa.me/2348104192645?text=Hello%20BLINKED!%20I'd%20like%20to%20know%20more%20about%20your%20services." target="_blank" class="whatsapp-btn">
@@ -459,8 +613,9 @@
         </div>
     </div>
 
-    <!-- Script for Hero Slider -->
+    <!-- Script for Hero & Testimonial Sliders -->
     <script>
+        // Hero Slider Logic
         const slides = document.querySelectorAll('.slide');
         let currentSlide = 0;
 
@@ -469,9 +624,18 @@
             currentSlide = (currentSlide + 1) % slides.length;
             slides[currentSlide].classList.add('active');
         }
+        setInterval(nextSlide, 4000); // Changes every 4 seconds
 
-        // Change image every 4 seconds
-        setInterval(nextSlide, 4000);
+        // Testimonial Slider Logic
+        const testimonials = document.querySelectorAll('.testimonial');
+        let currentTestimonial = 0;
+
+        function nextTestimonial() {
+            testimonials[currentTestimonial].classList.remove('active');
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            testimonials[currentTestimonial].classList.add('active');
+        }
+        setInterval(nextTestimonial, 5000); // Changes every 5 seconds
     </script>
 </body>
 </html>
