@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lash Installation • BLINKED</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Same elegant styling as the main page */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: radial-gradient(circle at 20% 20%, #1e1a1f, #0b080b);
+            font-family: 'Montserrat', sans-serif; color: #f0e7e7; line-height: 1.5;
+            min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 1.5rem;
+        }
+        .page-wrapper {
+            max-width: 1000px; width: 100%; background: rgba(20, 15, 18, 0.55);
+            backdrop-filter: blur(12px); border-radius: 3rem;
+            box-shadow: 0 30px 50px -15px rgba(0,0,0,0.8), 0 0 0 1px rgba(255, 215, 215, 0.1) inset;
+            padding: 3rem 2.5rem; border: 1px solid rgba(255, 230, 230, 0.08);
+        }
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 8px; color: #c7adad; text-decoration: none;
+            font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem;
+            transition: color 0.2s;
+        }
+        .back-btn:hover { color: #fff; }
+        
+        .service-header { text-align: center; margin-bottom: 3rem; }
+        .service-header h1 {
+            font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; color: #f3e1e1;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.8); margin-bottom: 0.5rem;
+        }
+        .service-header p { color: #c2a3a3; letter-spacing: 3px; text-transform: uppercase; font-size: 0.9rem; }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem; margin-bottom: 3rem;
+        }
+        .gallery-grid img {
+            width: 100%; height: 300px; object-fit: cover; border-radius: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.8), 0 0 0 1px rgba(255, 220, 220, 0.1) inset;
+            transition: transform 0.3s ease, filter 0.3s;
+            filter: brightness(0.9) contrast(1.05);
+        }
+        .gallery-grid img:hover { transform: scale(1.03); filter: brightness(1.1); }
+
+        /* CTA Buttons */
+        .cta-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 3rem; }
+        .whatsapp-btn {
+            display: inline-flex; align-items: center; gap: 12px; padding: 1.2rem 2.5rem;
+            border-radius: 60px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;
+            text-decoration: none; color: #f5efef; background: linear-gradient(145deg, #5a3c3c, #2f1e1e);
+            border: 1px solid rgba(255, 200, 200, 0.25); box-shadow: 10px 10px 20px rgba(0,0,0,0.7);
+            transition: all 0.25s ease;
+        }
+        .whatsapp-btn:hover { transform: translateY(-4px); box-shadow: 14px 18px 28px rgba(0,0,0,0.9); background: linear-gradient(145deg, #6f4b4b, #3d2828); }
+        .whatsapp-btn i { font-size: 1.4rem; color: #b7e6b7; text-shadow: 0 0 15px #44aa44; }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Menu</a>
+        
+        <div class="service-header">
+            <h1>Lash Installation</h1>
+            <p>Clean & Precise Application</p>
+        </div>
+
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1583002083754-80e5622aae68?auto=format&fit=crop&w=800&q=80" alt="Lash installation on female">
+            <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=800&q=80" alt="Close up of lashes">
+            <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=800&q=80" alt="Beautiful lashes">
+        </div>
+
+        <div class="cta-group">
+            <a href="https://wa.me/2348104192645?text=Hi%20BLINKED!%20I'd%20like%20to%20book%20a%20Lash%20Installation." target="_blank" class="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> Book via WhatsApp
+            </a>
+            <a href="https://wa.me/2348104192645?text=Hi%20BLINKED!%20Please%20share%20prices%20for%20Lash%20Installation." target="_blank" class="whatsapp-btn" style="background: linear-gradient(145deg, #3c2a2a, #1e1313);">
+                <i class="fas fa-tag"></i> Get Pricing
+            </a>
+        </div>
+    </div>
+</body>
+</html>
