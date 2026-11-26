@@ -4,19 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLINKED • luxury beauty studio</title>
-    <!-- Font Awesome 6 (free) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts for elegant typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             background: radial-gradient(circle at 20% 20%, #1e1a1f, #0b080b);
             font-family: 'Montserrat', sans-serif;
@@ -28,8 +21,6 @@
             align-items: center;
             padding: 1.5rem 1.5rem 0;
         }
-
-        /* main glass/3d container */
         .catalogue-wrapper {
             max-width: 1300px;
             width: 100%;
@@ -37,24 +28,12 @@
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border-radius: 3.5rem 3.5rem 2rem 2rem;
-            box-shadow: 
-                0 30px 50px -15px rgba(0,0,0,0.8),
-                0 0 0 1px rgba(255, 215, 215, 0.1) inset,
-                0 0 30px rgba(210, 150, 150, 0.2) inset,
-                15px 15px 30px rgba(0,0,0,0.7),
-                -5px -5px 20px rgba(255, 220, 220, 0.05);
+            box-shadow: 0 30px 50px -15px rgba(0,0,0,0.8), 0 0 0 1px rgba(255, 215, 215, 0.1) inset, 0 0 30px rgba(210, 150, 150, 0.2) inset, 15px 15px 30px rgba(0,0,0,0.7), -5px -5px 20px rgba(255, 220, 220, 0.05);
             border: 1px solid rgba(255, 230, 230, 0.08);
             padding: 2rem 2.5rem 3rem;
             transition: all 0.2s;
         }
-
-        /* header / logo */
-        .logo-area {
-            text-align: center;
-            margin-bottom: 2.5rem;
-            position: relative;
-        }
-
+        .logo-area { text-align: center; margin-bottom: 2.5rem; position: relative; }
         .logo {
             font-family: 'Cormorant Garamond', serif;
             font-size: 7rem;
@@ -62,37 +41,14 @@
             letter-spacing: 15px;
             text-transform: uppercase;
             color: #f5e6e6;
-            text-shadow: 
-                0 1px 0 #cfa5a5,
-                0 2px 0 #b88383,
-                0 3px 0 #9e6565,
-                0 4px 0 #854b4b,
-                0 5px 0 #6b3535,
-                0 8px 15px rgba(0,0,0,0.7),
-                0 15px 25px rgba(0,0,0,0.5),
-                0 0 30px rgba(255, 180, 180, 0.3);
+            text-shadow: 0 1px 0 #cfa5a5, 0 2px 0 #b88383, 0 3px 0 #9e6565, 0 4px 0 #854b4b, 0 5px 0 #6b3535, 0 8px 15px rgba(0,0,0,0.7), 0 15px 25px rgba(0,0,0,0.5), 0 0 30px rgba(255, 180, 180, 0.3);
             display: inline-block;
             transform: perspective(800px) rotateX(2deg) translateY(-5px);
-            transition: text-shadow 0.3s;
             line-height: 0.9;
             margin-bottom: 0.25rem;
             -webkit-text-stroke: 2px rgba(255, 240, 240, 0.2);
         }
-
-        .logo:hover {
-            text-shadow: 
-                0 1px 0 #e6c2c2,
-                0 2px 0 #d4a5a5,
-                0 3px 0 #bc8585,
-                0 4px 0 #a36b6b,
-                0 5px 0 #8a5252,
-                0 8px 20px rgba(0,0,0,0.9),
-                0 20px 35px rgba(0,0,0,0.6),
-                0 0 40px rgba(255, 200, 200, 0.5);
-        }
-
         .tagline {
-            font-family: 'Montserrat', sans-serif;
             font-weight: 300;
             letter-spacing: 7px;
             font-size: 0.9rem;
@@ -104,56 +60,34 @@
             padding-top: 1rem;
             text-shadow: 0 2px 5px rgba(0,0,0,0.5);
         }
-
-        /* location badge */
         .location-badge {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 0.75rem;
-            background: rgba(255, 235, 235, 0.05);
-            border: 1px solid rgba(210, 170, 170, 0.2);
-            border-radius: 60px;
-            padding: 0.6rem 1.8rem;
-            width: fit-content;
-            margin: 1.5rem auto 0;
-            backdrop-filter: blur(8px);
+            display: flex; justify-content: center; align-items: center; gap: 0.75rem;
+            background: rgba(255, 235, 235, 0.05); border: 1px solid rgba(210, 170, 170, 0.2);
+            border-radius: 60px; padding: 0.6rem 1.8rem; width: fit-content;
+            margin: 1.5rem auto 0; backdrop-filter: blur(8px);
             box-shadow: 0 10px 20px -10px rgba(0,0,0,0.8), 0 0 15px rgba(200, 140, 140, 0.1) inset;
         }
-
-        .location-badge i {
-            color: #dbb6b6;
-            font-size: 1.1rem;
-            filter: drop-shadow(0 0 8px #c98e8e);
-        }
-
-        .location-badge span {
-            font-weight: 400;
-            letter-spacing: 2px;
-            font-size: 0.9rem;
-            color: #ead7d7;
-        }
-
-        /* service grid */
+        .location-badge i { color: #dbb6b6; font-size: 1.1rem; filter: drop-shadow(0 0 8px #c98e8e); }
+        .location-badge span { font-weight: 400; letter-spacing: 2px; font-size: 0.9rem; color: #ead7d7; }
+        
         .service-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem 1.8rem;
             margin: 3.5rem 0 3rem;
         }
-
+        
+        /* Make the whole card a link */
+        .service-link { text-decoration: none; outline: none; display: block; }
+        
         .service-card {
             background: linear-gradient(145deg, rgba(40, 30, 32, 0.9), rgba(20, 12, 15, 0.9));
             border-radius: 2rem;
-            padding: 2rem 1.5rem 1.5rem;
+            padding: 2.5rem 1.5rem 2rem;
             text-align: center;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 210, 210, 0.12);
-            box-shadow: 
-                12px 12px 24px rgba(0,0,0,0.7),
-                -4px -4px 12px rgba(255, 230, 230, 0.05),
-                0 0 0 1px rgba(255, 220, 220, 0.05) inset,
-                0 0 18px rgba(220, 160, 160, 0.2) inset;
+            box-shadow: 12px 12px 24px rgba(0,0,0,0.7), -4px -4px 12px rgba(255, 230, 230, 0.05), 0 0 0 1px rgba(255, 220, 220, 0.05) inset, 0 0 18px rgba(220, 160, 160, 0.2) inset;
             transition: transform 0.25s ease, box-shadow 0.35s, border-color 0.3s;
             transform: perspective(1000px) rotateX(0deg) translateZ(0);
             will-change: transform;
@@ -161,295 +95,83 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
+            height: 100%;
         }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle at 30% 20%, rgba(255, 220, 220, 0.08), transparent 70%);
-            pointer-events: none;
-        }
-
         .service-card:hover {
             transform: perspective(1000px) rotateX(1deg) translateY(-8px) scale(1.01);
-            box-shadow: 
-                18px 22px 30px rgba(0,0,0,0.8),
-                -6px -6px 16px rgba(255, 235, 235, 0.08),
-                0 0 0 1px rgba(255, 215, 215, 0.2) inset,
-                0 0 25px rgba(230, 180, 180, 0.3) inset;
+            box-shadow: 18px 22px 30px rgba(0,0,0,0.8), -6px -6px 16px rgba(255, 235, 235, 0.08), 0 0 0 1px rgba(255, 215, 215, 0.2) inset, 0 0 25px rgba(230, 180, 180, 0.3) inset;
             border-color: rgba(255, 200, 200, 0.3);
         }
-
-        /* service icon */
         .service-icon {
-            font-size: 3.2rem;
-            color: #e7cfcf;
-            margin-bottom: 1.2rem;
+            font-size: 3.2rem; color: #e7cfcf; margin-bottom: 1.2rem;
             text-shadow: 0 4px 10px rgba(0,0,0,0.7), 0 0 25px #bb8e8e;
             background: linear-gradient(145deg, #392b2b, #1f1414);
-            width: 90px;
-            height: 90px;
-            line-height: 90px;
-            border-radius: 50%;
-            margin-left: auto;
-            margin-right: auto;
-            box-shadow: 
-                8px 8px 16px rgba(0,0,0,0.8),
-                -4px -4px 12px rgba(255, 220, 220, 0.1),
-                0 0 0 1px rgba(255, 215, 215, 0.2) inset,
-                0 0 20px rgba(200, 140, 140, 0.4) inset;
+            width: 90px; height: 90px; line-height: 90px; border-radius: 50%;
+            margin-left: auto; margin-right: auto;
+            box-shadow: 8px 8px 16px rgba(0,0,0,0.8), -4px -4px 12px rgba(255, 220, 220, 0.1), 0 0 0 1px rgba(255, 215, 215, 0.2) inset, 0 0 20px rgba(200, 140, 140, 0.4) inset;
             transition: all 0.3s;
         }
-
         .service-card:hover .service-icon {
-            color: #ffeded;
-            text-shadow: 0 6px 15px black, 0 0 40px #e6bebe;
-            box-shadow: 
-                10px 12px 20px rgba(0,0,0,0.9),
-                -6px -6px 16px rgba(255, 235, 235, 0.15),
-                0 0 0 1px rgba(255, 225, 225, 0.3) inset,
-                0 0 30px rgba(220, 160, 160, 0.6) inset;
+            color: #ffeded; text-shadow: 0 6px 15px black, 0 0 40px #e6bebe;
+            box-shadow: 10px 12px 20px rgba(0,0,0,0.9), -6px -6px 16px rgba(255, 235, 235, 0.15), 0 0 0 1px rgba(255, 225, 225, 0.3) inset, 0 0 30px rgba(220, 160, 160, 0.6) inset;
         }
-
         .service-card h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 600;
-            font-size: 1.9rem;
-            letter-spacing: 1px;
-            color: #f3e1e1;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.7), 0 0 15px rgba(200, 130, 130, 0.4);
-            margin-bottom: 1.2rem;
+            font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.9rem;
+            letter-spacing: 1px; color: #f3e1e1; text-shadow: 0 2px 8px rgba(0,0,0,0.7), 0 0 15px rgba(200, 130, 130, 0.4);
+            margin-bottom: 1.5rem;
         }
-
-        /* --- NEW REALISTIC GALLERY SECTION --- */
-        .service-gallery {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-            margin-bottom: 1.2rem;
-            padding: 0 0.5rem;
+        .sample-visual {
+            display: flex; justify-content: center; gap: 0.6rem;
+            margin-top: auto; margin-bottom: 1.2rem; opacity: 0.8;
         }
-
-        .gallery-img {
-            width: 100%;
-            height: 110px;
-            object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.6), 0 0 0 1px rgba(255, 220, 220, 0.1) inset;
-            transition: transform 0.3s ease, filter 0.3s ease;
-            filter: brightness(0.85) contrast(1.1);
-        }
-
-        .service-card:hover .gallery-img {
-            filter: brightness(1) contrast(1.05);
-        }
-
-        .gallery-img:hover {
-            transform: scale(1.05);
-            z-index: 2;
-            position: relative;
-            filter: brightness(1.1);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.8), 0 0 15px rgba(220, 160, 160, 0.4);
-        }
-
+        .sample-visual i { font-size: 1.2rem; color: #dbb6b6; filter: drop-shadow(0 0 8px #b57e7e); }
         .sample-note {
-            font-size: 0.85rem;
-            color: #c2a3a3;
-            letter-spacing: 2px;
-            margin-top: auto;
-            border-top: 1px dashed rgba(190, 150, 150, 0.3);
-            padding-top: 1rem;
-            text-transform: uppercase;
-            font-weight: 300;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+            font-size: 0.85rem; color: #c2a3a3; letter-spacing: 2px;
+            border-top: 1px dashed rgba(190, 150, 150, 0.3); padding-top: 1rem;
+            text-transform: uppercase; font-weight: 300;
+            display: flex; align-items: center; justify-content: center; gap: 8px;
         }
+        .sample-note i { font-size: 0.7rem; color: #dbb0b0; }
 
-        .sample-note i {
-            font-size: 0.7rem;
-            color: #dbb0b0;
-        }
-
-        /* CTA BUTTONS (whatsapp) */
-        .cta-group {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.8rem;
-            margin: 2.5rem 0 2rem;
-        }
-
+        .cta-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.8rem; margin: 2.5rem 0 2rem; }
         .whatsapp-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            padding: 1.2rem 2.8rem;
-            border-radius: 60px;
-            font-weight: 600;
-            font-size: 1rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: #f5efef;
-            background: linear-gradient(145deg, #5a3c3c, #2f1e1e);
+            display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+            padding: 1.2rem 2.8rem; border-radius: 60px; font-weight: 600; font-size: 1rem;
+            letter-spacing: 2px; text-transform: uppercase; text-decoration: none;
+            color: #f5efef; background: linear-gradient(145deg, #5a3c3c, #2f1e1e);
             border: 1px solid rgba(255, 200, 200, 0.25);
-            box-shadow: 
-                10px 10px 20px rgba(0,0,0,0.7),
-                -4px -4px 12px rgba(255, 220, 220, 0.08),
-                0 0 0 1px rgba(255, 230, 230, 0.1) inset,
-                0 0 20px rgba(210, 140, 140, 0.3) inset;
-            transition: all 0.25s ease;
-            cursor: pointer;
-            transform: perspective(600px) translateZ(0);
-            text-shadow: 0 2px 5px rgba(0,0,0,0.8);
+            box-shadow: 10px 10px 20px rgba(0,0,0,0.7), -4px -4px 12px rgba(255, 220, 220, 0.08), 0 0 0 1px rgba(255, 230, 230, 0.1) inset, 0 0 20px rgba(210, 140, 140, 0.3) inset;
+            transition: all 0.25s ease; cursor: pointer; text-shadow: 0 2px 5px rgba(0,0,0,0.8);
         }
-
-        .whatsapp-btn i {
-            font-size: 1.4rem;
-            color: #b7e6b7;
-            text-shadow: 0 0 15px #44aa44;
-            transition: transform 0.2s;
-        }
-
+        .whatsapp-btn i { font-size: 1.4rem; color: #b7e6b7; text-shadow: 0 0 15px #44aa44; transition: transform 0.2s; }
         .whatsapp-btn:hover {
-            transform: perspective(600px) translateY(-4px) scale(1.02);
-            background: linear-gradient(145deg, #6f4b4b, #3d2828);
-            box-shadow: 
-                14px 18px 28px rgba(0,0,0,0.8),
-                -6px -6px 16px rgba(255, 235, 235, 0.12),
-                0 0 0 1px rgba(255, 220, 220, 0.25) inset,
-                0 0 35px rgba(230, 160, 160, 0.4) inset;
+            transform: translateY(-4px) scale(1.02); background: linear-gradient(145deg, #6f4b4b, #3d2828);
+            box-shadow: 14px 18px 28px rgba(0,0,0,0.8), -6px -6px 16px rgba(255, 235, 235, 0.12), 0 0 0 1px rgba(255, 220, 220, 0.25) inset, 0 0 35px rgba(230, 160, 160, 0.4) inset;
             border-color: rgba(255, 220, 220, 0.5);
         }
-
-        .whatsapp-btn:hover i {
-            transform: scale(1.1);
-        }
-
-        .whatsapp-btn:active {
-            transform: perspective(600px) translateY(1px) scale(0.99);
-            box-shadow: 
-                5px 5px 15px rgba(0,0,0,0.8),
-                -2px -2px 8px rgba(255, 220, 220, 0.08),
-                0 0 0 1px rgba(255, 220, 220, 0.15) inset;
-        }
-
-        .price-btn {
-            background: linear-gradient(145deg, #3c2a2a, #1e1313);
-        }
-
-        /* phone area */
-        .phone-area {
-            text-align: center;
-            margin: 3rem 0 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
+        .price-btn { background: linear-gradient(145deg, #3c2a2a, #1e1313); }
+        
+        .phone-area { text-align: center; margin: 3rem 0 1rem; display: flex; justify-content: center; }
         .phone-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            color: #dbbebe;
-            text-decoration: none;
-            font-size: 1.2rem;
-            letter-spacing: 2px;
-            background: rgba(30, 20, 22, 0.6);
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            border: 1px solid rgba(200, 160, 160, 0.2);
-            box-shadow: 0 10px 20px -8px black, 0 0 12px rgba(200, 150, 150, 0.15) inset;
-            backdrop-filter: blur(8px);
+            display: inline-flex; align-items: center; gap: 10px; color: #dbbebe;
+            text-decoration: none; font-size: 1.2rem; letter-spacing: 2px;
+            background: rgba(30, 20, 22, 0.6); padding: 0.8rem 2rem; border-radius: 50px;
+            border: 1px solid rgba(200, 160, 160, 0.2); box-shadow: 0 10px 20px -8px black, 0 0 12px rgba(200, 150, 150, 0.15) inset;
             transition: 0.2s;
         }
+        .phone-link:hover { background: rgba(60, 40, 44, 0.8); color: #f5e5e5; }
+        .footer-note { margin-top: 2rem; font-size: 0.8rem; text-align: center; color: #9e8080; border-top: 1px solid rgba(180, 140, 140, 0.2); padding-top: 1.8rem; width: 100%; }
 
-        .phone-link i {
-            color: #dcbebe;
-            font-size: 1.2rem;
-            filter: drop-shadow(0 0 8px #c09090);
-        }
-
-        .phone-link:hover {
-            background: rgba(60, 40, 44, 0.8);
-            color: #f5e5e5;
-            box-shadow: 0 15px 25px -10px black, 0 0 20px rgba(220, 170, 170, 0.3) inset;
-        }
-
-        /* footer note */
-        .footer-note {
-            margin-top: 2rem;
-            font-size: 0.8rem;
-            text-align: center;
-            color: #9e8080;
-            letter-spacing: 1px;
-            font-weight: 300;
-            border-top: 1px solid rgba(180, 140, 140, 0.2);
-            padding-top: 1.8rem;
-            width: 100%;
-        }
-
-        /* responsiveness */
         @media (max-width: 700px) {
-            .catalogue-wrapper {
-                padding: 1.5rem 1rem 2rem;
-                border-radius: 2rem;
-            }
-            .logo {
-                font-size: 4.5rem;
-                letter-spacing: 8px;
-            }
-            .tagline {
-                letter-spacing: 4px;
-                font-size: 0.7rem;
-            }
-            .service-grid {
-                gap: 1.5rem;
-            }
-            .whatsapp-btn {
-                padding: 1rem 1.8rem;
-                font-size: 0.8rem;
-                gap: 8px;
-            }
-            .phone-link {
-                font-size: 0.9rem;
-                padding: 0.6rem 1.2rem;
-            }
-            .gallery-img {
-                height: 90px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .logo {
-                font-size: 3.5rem;
-                letter-spacing: 5px;
-            }
-            .service-card h3 {
-                font-size: 1.6rem;
-            }
-            .cta-group {
-                gap: 1rem;
-            }
-            .whatsapp-btn {
-                padding: 0.9rem 1.2rem;
-                font-size: 0.7rem;
-            }
+            .catalogue-wrapper { padding: 1.5rem 1rem 2rem; border-radius: 2rem; }
+            .logo { font-size: 4.5rem; letter-spacing: 8px; }
+            .service-grid { gap: 1.5rem; }
+            .whatsapp-btn { padding: 1rem 1.8rem; font-size: 0.8rem; }
         }
     </style>
 </head>
 <body>
     <div class="catalogue-wrapper">
-        <!-- logo & header -->
         <div class="logo-area">
             <h1 class="logo">BLINKED</h1>
             <div class="tagline">luxury beauty • lagos</div>
@@ -459,114 +181,85 @@
             </div>
         </div>
 
-        <!-- service catalogue grid -->
         <div class="service-grid">
             <!-- Lash Installation -->
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-eye"></i></div>
-                <h3>Lash Installation</h3>
-                <div class="service-gallery">
-                    <!-- Female getting lashes -->
-                    <img src="https://images.unsplash.com/photo-1583002083754-80e5622aae68?auto=format&fit=crop&w=400&q=80" alt="Lash installation on female" class="gallery-img">
-                    <!-- Close up lashes -->
-                    <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=400&q=80" alt="Close up of lashes" class="gallery-img">
+            <a href="lash-installation.html" class="service-link">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-eye"></i></div>
+                    <h3>Lash Installation</h3>
+                    <div class="sample-visual"><i class="fas fa-star"></i><i class="fas fa-feather-alt"></i><i class="fas fa-star"></i></div>
+                    <div class="sample-note"><i class="fas fa-camera"></i> View Gallery</div>
                 </div>
-                <div class="sample-note"><i class="fas fa-camera"></i> clean & precise application</div>
-            </div>
+            </a>
 
             <!-- Manicure & Pedicure -->
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-hand-sparkles"></i></div>
-                <h3>Manicure & Pedicure</h3>
-                <div class="service-gallery">
-                    <!-- Clean manicure -->
-                    <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=400&q=80" alt="Clean manicure" class="gallery-img">
-                    <!-- Elegant nails -->
-                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=400&q=80" alt="Elegant nails" class="gallery-img">
+            <a href="manicure.html" class="service-link">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-hand-sparkles"></i></div>
+                    <h3>Manicure & Pedicure</h3>
+                    <div class="sample-visual"><i class="fas fa-gem"></i><i class="fas fa-paint-brush"></i><i class="fas fa-gem"></i></div>
+                    <div class="sample-note"><i class="fas fa-camera"></i> View Gallery</div>
                 </div>
-                <div class="sample-note"><i class="fas fa-camera"></i> flawless finish</div>
-            </div>
+            </a>
 
             <!-- Lash Extensions -->
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-grip-lines"></i></div>
-                <h3>Lash Extensions</h3>
-                <div class="service-gallery">
-                    <!-- Voluminous lashes -->
-                    <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=400&q=80" alt="Voluminous lash extensions" class="gallery-img">
-                    <!-- Natural extensions -->
-                    <img src="https://images.unsplash.com/photo-1515688594390-b649af70d282?auto=format&fit=crop&w=400&q=80" alt="Natural lash extensions" class="gallery-img">
+            <a href="lash-extensions.html" class="service-link">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-grip-lines"></i></div>
+                    <h3>Lash Extensions</h3>
+                    <div class="sample-visual"><i class="fas fa-magic"></i><i class="fas fa-feather"></i><i class="fas fa-magic"></i></div>
+                    <div class="sample-note"><i class="fas fa-camera"></i> View Gallery</div>
                 </div>
-                <div class="sample-note"><i class="fas fa-camera"></i> volume & length</div>
-            </div>
+            </a>
 
             <!-- Facials -->
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-spa"></i></div>
-                <h3>Facials</h3>
-                <div class="service-gallery">
-                    <!-- Facial treatment -->
-                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=400&q=80" alt="Facial treatment" class="gallery-img">
-                    <!-- Glowing skin -->
-                    <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=400&q=80" alt="Glowing skin after facial" class="gallery-img">
+            <a href="facials.html" class="service-link">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-spa"></i></div>
+                    <h3>Facials</h3>
+                    <div class="sample-visual"><i class="fas fa-leaf"></i><i class="fas fa-sun"></i><i class="fas fa-leaf"></i></div>
+                    <div class="sample-note"><i class="fas fa-camera"></i> View Gallery</div>
                 </div>
-                <div class="sample-note"><i class="fas fa-camera"></i> radiant glow</div>
-            </div>
+            </a>
 
             <!-- Brow Lamination & Tint -->
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-brush"></i></div>
-                <h3>Brow Lamination & Tint</h3>
-                <div class="service-gallery">
-                    <!-- Defined brows -->
-                    <img src="https://images.unsplash.com/photo-1620331311520-246422fd82f9?auto=format&fit=crop&w=400&q=80" alt="Defined brows" class="gallery-img">
-                    <!-- Brow tinting -->
-                    <img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&w=400&q=80" alt="Brow tinting" class="gallery-img">
+            <a href="brows.html" class="service-link">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-brush"></i></div>
+                    <h3>Brow Lamination & Tint</h3>
+                    <div class="sample-visual"><i class="fas fa-arrows-alt-h"></i><i class="fas fa-palette"></i><i class="fas fa-arrows-alt-h"></i></div>
+                    <div class="sample-note"><i class="fas fa-camera"></i> View Gallery</div>
                 </div>
-                <div class="sample-note"><i class="fas fa-camera"></i> structured & defined</div>
-            </div>
+            </a>
 
             <!-- Tattoo -->
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-pen-fancy"></i></div>
-                <h3>Tattoo</h3>
-                <div class="service-gallery">
-                    <!-- Female tattoo -->
-                    <img src="https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=400&q=80" alt="Female tattoo" class="gallery-img">
-                    <!-- Male tattoo -->
-                    <img src="https://images.unsplash.com/photo-1562962230-16e4623d36e6?auto=format&fit=crop&w=400&q=80" alt="Male tattoo" class="gallery-img">
+            <a href="tattoo.html" class="service-link">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-pen-fancy"></i></div>
+                    <h3>Tattoo</h3>
+                    <div class="sample-visual"><i class="fas fa-skull"></i><i class="fas fa-dragon"></i><i class="fas fa-skull"></i></div>
+                    <div class="sample-note"><i class="fas fa-camera"></i> View Gallery</div>
                 </div>
-                <div class="sample-note"><i class="fas fa-camera"></i> crisp lines & shading</div>
-            </div>
+            </a>
         </div>
 
-        <!-- CTA Buttons – whatsapp redirect -->
         <div class="cta-group">
-            <a href="https://wa.me/2348104192645?text=Hello%20BLINKED!%20I'd%20like%20to%20know%20more%20about%20your%20services." 
-               target="_blank" 
-               class="whatsapp-btn" 
-               rel="noopener noreferrer">
+            <a href="https://wa.me/2348104192645?text=Hello%20BLINKED!%20I'd%20like%20to%20know%20more%20about%20your%20services." target="_blank" class="whatsapp-btn" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i> Customer Service
             </a>
-            <a href="https://wa.me/2348104192645?text=Hi%20BLINKED!%20Please%20share%20your%20price%20list%20and%20how%20to%20place%20an%20order." 
-               target="_blank" 
-               class="whatsapp-btn price-btn" 
-               rel="noopener noreferrer">
+            <a href="https://wa.me/2348104192645?text=Hi%20BLINKED!%20Please%20share%20your%20price%20list%20and%20how%20to%20place%20an%20order." target="_blank" class="whatsapp-btn price-btn" rel="noopener noreferrer">
                 <i class="fas fa-tag"></i> Pricing & Order
             </a>
         </div>
 
-        <!-- phone contact -->
         <div class="phone-area">
             <a href="tel:+2348104192645" class="phone-link">
                 <i class="fas fa-phone-alt"></i> +234 810 419 2645
             </a>
         </div>
 
-        <!-- small footer with extra whatsapp mention -->
         <div class="footer-note">
-            <i class="fab fa-whatsapp" style="color: #b7e6b7; margin-right: 6px;"></i> 
-            tap any button – we reply instantly on WhatsApp
+            <i class="fab fa-whatsapp" style="color: #b7e6b7; margin-right: 6px;"></i> tap any button – we reply instantly on WhatsApp
         </div>
     </div>
 </body>
