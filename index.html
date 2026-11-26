@@ -137,15 +137,15 @@
         /* service grid */
         .service-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             gap: 2rem 1.8rem;
             margin: 3.5rem 0 3rem;
         }
 
         .service-card {
             background: linear-gradient(145deg, rgba(40, 30, 32, 0.9), rgba(20, 12, 15, 0.9));
-            border-radius: 2rem 2rem 2rem 2rem;
-            padding: 2rem 1.5rem 2.2rem;
+            border-radius: 2rem;
+            padding: 2rem 1.5rem 1.5rem;
             text-align: center;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 210, 210, 0.12);
@@ -159,6 +159,8 @@
             will-change: transform;
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
         .service-card::before {
@@ -182,7 +184,7 @@
             border-color: rgba(255, 200, 200, 0.3);
         }
 
-        /* service icon & image stand‑in (3d glow) */
+        /* service icon */
         .service-icon {
             font-size: 3.2rem;
             color: #e7cfcf;
@@ -220,16 +222,47 @@
             letter-spacing: 1px;
             color: #f3e1e1;
             text-shadow: 0 2px 8px rgba(0,0,0,0.7), 0 0 15px rgba(200, 130, 130, 0.4);
-            margin-bottom: 0.5rem;
+            margin-bottom: 1.2rem;
         }
 
-        .service-card .sample-note {
+        /* --- NEW REALISTIC GALLERY SECTION --- */
+        .service-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 1.2rem;
+            padding: 0 0.5rem;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.6), 0 0 0 1px rgba(255, 220, 220, 0.1) inset;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            filter: brightness(0.85) contrast(1.1);
+        }
+
+        .service-card:hover .gallery-img {
+            filter: brightness(1) contrast(1.05);
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+            z-index: 2;
+            position: relative;
+            filter: brightness(1.1);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.8), 0 0 15px rgba(220, 160, 160, 0.4);
+        }
+
+        .sample-note {
             font-size: 0.85rem;
             color: #c2a3a3;
             letter-spacing: 2px;
-            margin-top: 1rem;
+            margin-top: auto;
             border-top: 1px dashed rgba(190, 150, 150, 0.3);
-            padding-top: 0.8rem;
+            padding-top: 1rem;
             text-transform: uppercase;
             font-weight: 300;
             display: flex;
@@ -308,7 +341,6 @@
                 0 0 0 1px rgba(255, 220, 220, 0.15) inset;
         }
 
-        /* price & order button (extra style) */
         .price-btn {
             background: linear-gradient(145deg, #3c2a2a, #1e1313);
         }
@@ -366,21 +398,6 @@
             width: 100%;
         }
 
-        /* image attention: using icons to suggest clean job, but we add visual sample via icons & big text */
-        .service-card .sample-visual {
-            display: flex;
-            justify-content: center;
-            gap: 0.6rem;
-            margin-top: 0.7rem;
-            opacity: 0.8;
-        }
-
-        .sample-visual i {
-            font-size: 1.2rem;
-            color: #dbb6b6;
-            filter: drop-shadow(0 0 8px #b57e7e);
-        }
-
         /* responsiveness */
         @media (max-width: 700px) {
             .catalogue-wrapper {
@@ -406,6 +423,9 @@
             .phone-link {
                 font-size: 0.9rem;
                 padding: 0.6rem 1.2rem;
+            }
+            .gallery-img {
+                height: 90px;
             }
         }
 
@@ -445,71 +465,82 @@
             <div class="service-card">
                 <div class="service-icon"><i class="fas fa-eye"></i></div>
                 <h3>Lash Installation</h3>
-                <div class="sample-visual">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-feather-alt"></i>
-                    <i class="fas fa-star"></i>
+                <div class="service-gallery">
+                    <!-- Female getting lashes -->
+                    <img src="https://images.unsplash.com/photo-1583002083754-80e5622aae68?auto=format&fit=crop&w=400&q=80" alt="Lash installation on female" class="gallery-img">
+                    <!-- Close up lashes -->
+                    <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=400&q=80" alt="Close up of lashes" class="gallery-img">
                 </div>
                 <div class="sample-note"><i class="fas fa-camera"></i> clean & precise application</div>
             </div>
+
             <!-- Manicure & Pedicure -->
             <div class="service-card">
                 <div class="service-icon"><i class="fas fa-hand-sparkles"></i></div>
                 <h3>Manicure & Pedicure</h3>
-                <div class="sample-visual">
-                    <i class="fas fa-gem"></i>
-                    <i class="fas fa-paint-brush"></i>
-                    <i class="fas fa-gem"></i>
+                <div class="service-gallery">
+                    <!-- Clean manicure -->
+                    <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=400&q=80" alt="Clean manicure" class="gallery-img">
+                    <!-- Elegant nails -->
+                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=400&q=80" alt="Elegant nails" class="gallery-img">
                 </div>
                 <div class="sample-note"><i class="fas fa-camera"></i> flawless finish</div>
             </div>
+
             <!-- Lash Extensions -->
             <div class="service-card">
                 <div class="service-icon"><i class="fas fa-grip-lines"></i></div>
                 <h3>Lash Extensions</h3>
-                <div class="sample-visual">
-                    <i class="fas fa-magic"></i>
-                    <i class="fas fa-feather"></i>
-                    <i class="fas fa-magic"></i>
+                <div class="service-gallery">
+                    <!-- Voluminous lashes -->
+                    <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=400&q=80" alt="Voluminous lash extensions" class="gallery-img">
+                    <!-- Natural extensions -->
+                    <img src="https://images.unsplash.com/photo-1515688594390-b649af70d282?auto=format&fit=crop&w=400&q=80" alt="Natural lash extensions" class="gallery-img">
                 </div>
                 <div class="sample-note"><i class="fas fa-camera"></i> volume & length</div>
             </div>
+
             <!-- Facials -->
             <div class="service-card">
                 <div class="service-icon"><i class="fas fa-spa"></i></div>
                 <h3>Facials</h3>
-                <div class="sample-visual">
-                    <i class="fas fa-leaf"></i>
-                    <i class="fas fa-sun"></i>
-                    <i class="fas fa-leaf"></i>
+                <div class="service-gallery">
+                    <!-- Facial treatment -->
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=400&q=80" alt="Facial treatment" class="gallery-img">
+                    <!-- Glowing skin -->
+                    <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=400&q=80" alt="Glowing skin after facial" class="gallery-img">
                 </div>
                 <div class="sample-note"><i class="fas fa-camera"></i> radiant glow</div>
             </div>
+
             <!-- Brow Lamination & Tint -->
             <div class="service-card">
                 <div class="service-icon"><i class="fas fa-brush"></i></div>
                 <h3>Brow Lamination & Tint</h3>
-                <div class="sample-visual">
-                    <i class="fas fa-arrows-alt-h"></i>
-                    <i class="fas fa-palette"></i>
-                    <i class="fas fa-arrows-alt-h"></i>
+                <div class="service-gallery">
+                    <!-- Defined brows -->
+                    <img src="https://images.unsplash.com/photo-1620331311520-246422fd82f9?auto=format&fit=crop&w=400&q=80" alt="Defined brows" class="gallery-img">
+                    <!-- Brow tinting -->
+                    <img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&w=400&q=80" alt="Brow tinting" class="gallery-img">
                 </div>
                 <div class="sample-note"><i class="fas fa-camera"></i> structured & defined</div>
             </div>
+
             <!-- Tattoo -->
             <div class="service-card">
                 <div class="service-icon"><i class="fas fa-pen-fancy"></i></div>
                 <h3>Tattoo</h3>
-                <div class="sample-visual">
-                    <i class="fas fa-skull"></i>
-                    <i class="fas fa-dragon"></i>
-                    <i class="fas fa-skull"></i>
+                <div class="service-gallery">
+                    <!-- Female tattoo -->
+                    <img src="https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=400&q=80" alt="Female tattoo" class="gallery-img">
+                    <!-- Male tattoo -->
+                    <img src="https://images.unsplash.com/photo-1562962230-16e4623d36e6?auto=format&fit=crop&w=400&q=80" alt="Male tattoo" class="gallery-img">
                 </div>
                 <div class="sample-note"><i class="fas fa-camera"></i> crisp lines & shading</div>
             </div>
         </div>
 
-        <!-- CTA Buttons – whatsapp redirect (all pages use this logic) -->
+        <!-- CTA Buttons – whatsapp redirect -->
         <div class="cta-group">
             <a href="https://wa.me/2348104192645?text=Hello%20BLINKED!%20I'd%20like%20to%20know%20more%20about%20your%20services." 
                target="_blank" 
