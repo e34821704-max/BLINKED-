@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -19,7 +19,6 @@
         }
 
         body {
-            /* Luxurious Deep Plum & Rose Gold Gradient */
             background: linear-gradient(135deg, #140d10 0%, #29181f 50%, #140d10 100%);
             font-family: 'Montserrat', sans-serif;
             color: #fdf5f5;
@@ -43,18 +42,18 @@
         }
         .orb-1 {
             width: 450px; height: 450px;
-            background: rgba(212, 165, 165, 0.3);
+            background: rgba(212, 165, 165, 0.25);
             top: -150px; left: -150px;
         }
         .orb-2 {
             width: 350px; height: 350px;
-            background: rgba(163, 107, 107, 0.4);
+            background: rgba(163, 107, 107, 0.3);
             bottom: 10%; right: -100px;
             animation-delay: -4s;
         }
         .orb-3 {
             width: 300px; height: 300px;
-            background: rgba(230, 194, 194, 0.2);
+            background: rgba(230, 194, 194, 0.15);
             top: 40%; left: 15%;
             animation-delay: -8s;
         }
@@ -83,49 +82,52 @@
             z-index: 1;
         }
 
-        /* --- CUSTOM SVG LOGO --- */
+        /* --- NEW PROFESSIONAL LOGO AREA --- */
         .logo-area {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
             position: relative;
         }
 
-        .brand-logo-svg {
-            width: 120px;
-            height: auto;
-            margin-bottom: 1rem;
-            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.6)) drop-shadow(0 0 20px rgba(212, 165, 165, 0.4));
-            transition: transform 0.4s ease;
+        .brand-logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 0.5rem;
         }
 
-        .logo-area:hover .brand-logo-svg {
-            transform: scale(1.05) translateY(-5px);
+        /* High-end Minimalist Eye & Diamond Icon */
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            fill: url(#roseGoldGradient);
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.6)) drop-shadow(0 0 15px rgba(212, 165, 165, 0.3));
         }
 
         .logo-text {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 5rem;
-            font-weight: 700;
-            letter-spacing: 20px;
+            font-family: 'Cinzel', serif; /* Very classy, high-end fashion serif */
+            font-size: 4.5rem;
+            font-weight: 600;
+            letter-spacing: 12px;
             text-transform: uppercase;
-            background: linear-gradient(to bottom, #ffffff, #f0d3d3, #b88383);
+            background: linear-gradient(to bottom, #ffffff 0%, #f0d3d3 40%, #b88383 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 8px 15px rgba(0,0,0,0.5), 0 0 30px rgba(255, 200, 200, 0.2);
+            text-shadow: 0 8px 15px rgba(0,0,0,0.5), 0 0 30px rgba(255, 200, 200, 0.15);
             line-height: 1;
-            margin-bottom: 0.5rem;
-            margin-left: 20px; /* offsets the letter-spacing to center it */
+            margin-right: -12px; /* Offsets letter spacing for perfect centering */
         }
 
         .tagline {
             font-weight: 300;
-            letter-spacing: 8px;
-            font-size: 0.85rem;
+            letter-spacing: 10px;
+            font-size: 0.75rem;
             color: #d4baba;
             text-transform: uppercase;
             text-shadow: 0 2px 5px rgba(0,0,0,0.8);
+            margin-top: 5px;
         }
 
         /* --- HERO SLIDER (10 Images) --- */
@@ -168,11 +170,11 @@
         .slide-text {
             position: relative;
             z-index: 2;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
             color: #fff;
             text-shadow: 0 4px 15px rgba(0,0,0,0.9);
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             transform: translateY(20px);
             opacity: 0;
             transition: all 0.8s ease 0.3s;
@@ -255,9 +257,9 @@
         }
 
         .service-card h3 {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Cinzel', serif;
             font-weight: 600;
-            font-size: 1.7rem;
+            font-size: 1.5rem;
             color: #fff;
             margin-bottom: 1rem;
             text-shadow: 0 2px 5px rgba(0,0,0,0.5);
@@ -287,8 +289,8 @@
         }
 
         .booking-section h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.5rem;
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
             color: #f0d3d3;
             margin-bottom: 2rem;
             letter-spacing: 2px;
@@ -299,7 +301,7 @@
             width: 100%;
             max-width: 800px;
             margin: 0 auto;
-            height: 200px;
+            height: 220px;
             background: rgba(255, 255, 255, 0.03);
             border-radius: 2rem;
             border: 1px solid rgba(255, 215, 215, 0.1);
@@ -364,7 +366,7 @@
             padding: 1.2rem 3rem;
             border-radius: 60px;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.9rem;
             letter-spacing: 2px;
             text-transform: uppercase;
             text-decoration: none;
@@ -431,10 +433,11 @@
         /* Mobile Adjustments */
         @media (max-width: 768px) {
             .catalogue-wrapper { padding: 1.5rem; border-radius: 2rem; }
-            .logo-text { font-size: 3rem; letter-spacing: 10px; margin-left: 10px; }
-            .tagline { letter-spacing: 4px; font-size: 0.65rem; }
+            .logo-text { font-size: 2.8rem; letter-spacing: 6px; margin-right: -6px; }
+            .logo-icon { width: 40px; height: 40px; }
+            .tagline { letter-spacing: 4px; font-size: 0.6rem; }
             .hero-slider { height: 300px; }
-            .slide-text { font-size: 2rem; }
+            .slide-text { font-size: 1.8rem; }
             .service-grid { grid-template-columns: 1fr; }
             .whatsapp-btn { padding: 1rem 1.5rem; font-size: 0.8rem; width: 100%; }
             .testimonial-slider { height: 250px; }
@@ -443,6 +446,17 @@
 </head>
 <body>
 
+    <!-- SVG Definitions for the Rose Gold Gradient -->
+    <svg width="0" height="0" style="position:absolute;">
+        <defs>
+            <linearGradient id="roseGoldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" />
+                <stop offset="40%" stop-color="#f0d3d3" />
+                <stop offset="100%" stop-color="#b88383" />
+            </linearGradient>
+        </defs>
+    </svg>
+
     <!-- 3D Background Orbs -->
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
@@ -450,33 +464,25 @@
 
     <div class="catalogue-wrapper">
         
-        <!-- Custom SVG Logo & Header -->
+        <!-- New Professional Logo -->
         <div class="logo-area">
-            <!-- SVG Logo representing an elegant eye & diamond tear (The Blink) -->
-            <svg class="brand-logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#ffffff" />
-                        <stop offset="50%" stop-color="#f0d3d3" />
-                        <stop offset="100%" stop-color="#b88383" />
-                    </linearGradient>
-                    <linearGradient id="darkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#2d1b22" />
-                        <stop offset="100%" stop-color="#140d10" />
-                    </linearGradient>
-                </defs>
-                <!-- Eye Outline -->
-                <path d="M 10 50 Q 50 10 90 50 Q 50 90 10 50 Z" fill="url(#darkGradient)" stroke="url(#goldGradient)" stroke-width="3"/>
-                <!-- Iris -->
-                <circle cx="50" cy="50" r="18" fill="url(#goldGradient)" />
-                <!-- Pupil -->
-                <circle cx="50" cy="50" r="8" fill="#140d10" />
-                <!-- Diamond Tear (The Blink) -->
-                <polygon points="50,68 45,80 50,90 55,80" fill="url(#goldGradient)" opacity="0.9"/>
-                <!-- Eyelashes -->
-                <path d="M 25 35 L 20 20 M 50 20 L 50 5 M 75 35 L 80 20" stroke="url(#goldGradient)" stroke-width="2.5" stroke-linecap="round"/>
-            </svg>
-            <h1 class="logo-text">BLINKED</h1>
+            <div class="brand-logo-container">
+                <!-- Elegant Custom Eye/Lash Icon -->
+                <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Outer Eye -->
+                    <path d="M 5 50 Q 50 15 95 50 Q 50 85 5 50 Z" fill="none" stroke="url(#roseGoldGradient)" stroke-width="3"/>
+                    <!-- Iris -->
+                    <circle cx="50" cy="50" r="14" fill="url(#roseGoldGradient)" />
+                    <!-- Pupil (Cutout) -->
+                    <circle cx="50" cy="50" r="6" fill="#140d10" />
+                    <!-- Diamond Lash/Tear -->
+                    <path d="M 50 65 L 46 75 L 50 85 L 54 75 Z" fill="url(#roseGoldGradient)"/>
+                    <!-- Lashes -->
+                    <path d="M 20 35 L 15 20 M 50 18 L 50 5 M 80 35 L 85 20" stroke="url(#roseGoldGradient)" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+                
+                <h1 class="logo-text">BLINKED</h1>
+            </div>
             <div class="tagline">Where Beauty Meets Comfort At Its Peak</div>
         </div>
 
@@ -615,7 +621,6 @@
 
     <!-- Script for Hero & Testimonial Sliders -->
     <script>
-        // Hero Slider Logic
         const slides = document.querySelectorAll('.slide');
         let currentSlide = 0;
 
@@ -624,9 +629,8 @@
             currentSlide = (currentSlide + 1) % slides.length;
             slides[currentSlide].classList.add('active');
         }
-        setInterval(nextSlide, 4000); // Changes every 4 seconds
+        setInterval(nextSlide, 4000); 
 
-        // Testimonial Slider Logic
         const testimonials = document.querySelectorAll('.testimonial');
         let currentTestimonial = 0;
 
@@ -635,7 +639,7 @@
             currentTestimonial = (currentTestimonial + 1) % testimonials.length;
             testimonials[currentTestimonial].classList.add('active');
         }
-        setInterval(nextTestimonial, 5000); // Changes every 5 seconds
+        setInterval(nextTestimonial, 5000); 
     </script>
 </body>
 </html>
